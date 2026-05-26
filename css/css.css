@@ -1,0 +1,40 @@
+.matrix {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  grid-template-areas:
+      "first first first first"
+      "second merged merged second"
+      "third third third third"
+      "fourth fourth fourth fourth";
+}
+
+.matrix__item {
+  border: 1px solid black;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first {
+  grid-area: first;
+}
+
+.second {
+  grid-area: second;
+}
+
+.third {
+  grid-area: third;
+}
+
+.fourth {
+  grid-area: fourth;
+}
+
+.matrix__item_type_merged {
+  grid-area: merged;
+}
